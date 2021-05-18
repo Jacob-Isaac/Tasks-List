@@ -6,7 +6,7 @@
     },
     {
       content: "zrobić zakupy",
-      done: true,
+      done: false,
     },
   ];
 
@@ -22,8 +22,8 @@
   function render() {
     let htmlString = "";
     for (const task of tasks) {
-      htmlString += `<li 
-      ${task.done ? ' style="text-decoration: line-through"' : ""}> 
+      htmlString += `<li class="list__item 
+      ${task.done ? " list__item--decoration" : ""}"> 
       <button class="js-remove"> usuń </button>
       <button class="js-done"> tick </button>
       ${task.content}</li>`;
@@ -33,12 +33,15 @@
   }
   function buttonsEvents() {
     const removeButtons = document.querySelectorAll(".js-remove");
+
     removeButtons.forEach((removeButton, removeIndex) => {
       removeButton.addEventListener("click", () => {
         removeTask(removeIndex);
       });
     });
+
     const toggleDoneButtons = document.querySelectorAll(".js-done");
+
     toggleDoneButtons.forEach((toggleDoneButton, toggleIndex) => {
       toggleDoneButton.addEventListener("click", () => {
         toggleTask(toggleIndex);
