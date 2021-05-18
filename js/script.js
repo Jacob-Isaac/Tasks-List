@@ -44,5 +44,18 @@
       <button class="js-remove"> usuń </button>
       ${task.content}</li>`;
     }
+    document.querySelector(".js-list").innerHTML = htmlString;
+
+    const removeButtons = document.querySelectorAll(".js-remove");
+removeButtons.forEach((removeButton, index)=> {
+    removeButton.addEventListener("click", () => {
+    removeTask(index);
+    });
+});
+
+}
+function removeTask(index){
+tasks.splice(index, 1);
+render();
 }
 }
