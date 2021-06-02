@@ -21,12 +21,14 @@
   }
   function render() {
     let htmlString = "";
-    for (const task of tasks) {
-      htmlString += `<li class="list__item 
-      ${task.done ? " list__item--decoration" : ""}"> 
-      <button class="js-remove"> usuń </button>
-      <button class="js-done"> tick </button>
-      ${task.content}</li>`;
+    for (const task of tasks) 
+    {
+      htmlString += `<li class="list__item"> 
+      <button class="js-remove button button__remove">🗑</button>
+      <button class="js-done button button__done"> ${task.done ? "✔" : ""}</button>
+      <span class="content
+      ${task.done ? "content--decoration" : ""}">
+      ${task.content}</span></li>`;
     }
     document.querySelector(".js-list").innerHTML = htmlString;
     buttonsEvents();
