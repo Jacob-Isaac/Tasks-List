@@ -1,3 +1,38 @@
-.list__item--decoration {
+.content--decoration {
 text-decoration: line-through;
+}
+.list{
+  max-width: 800px;
+}
+.list__item {
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding: 10px 0;
+border-bottom: 1px solid #ccc;
+}
+
+.button {
+margin: 15px;
+}
+.button__remove {
+  border: transparent;
+  cursor: pointer;
+  background: red;
+  order:2;
+  min-width: 40px;
+  min-height: 40px;
+}
+.button__done {
+  border: transparent;
+  cursor: pointer;
+  background: green;
+  min-width: 40px;
+  min-height: 40px;
+  order:-1;
+  color:white;
+}
+.content{
+  display:flex;
+  flex-grow:1;
 }
