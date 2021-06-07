@@ -1,38 +1,94 @@
-.content--decoration {
-text-decoration: line-through;
+.body {
+  background-color: rgb(240, 240, 240);
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: bold;
+  font-size: 13px; */
 }
-.list{
-  max-width: 800px;
+.container {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+}
+.body__headerFont {
+  margin-top: 40px;
+}
+.content--decoration {
+  text-decoration: line-through;
+}
+.list {
+  margin:auto;
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  /* border-top: 1px solid #ccc; */
 }
 .list__item {
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding: 10px 0;
-border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px 0; */
+  border-bottom: 1px solid #ccc;
 }
 
 .button {
-margin: 15px;
+  margin: 15px;
 }
 .button__remove {
   border: transparent;
   cursor: pointer;
   background: red;
-  order:2;
-  min-width: 40px;
-  min-height: 40px;
+  order: 2;
+  min-width: 30px;
+  min-height: 30px;
+  color:white;
 }
 .button__done {
   border: transparent;
   cursor: pointer;
   background: green;
-  min-width: 40px;
-  min-height: 40px;
-  order:-1;
-  color:white;
+  min-width: 30px;
+  min-height: 30px;
+  order: -1;
+  color: white;
 }
-.content{
-  display:flex;
-  flex-grow:1;
+.content {
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  display: flex;
+  flex-grow: 1;
+}
+
+.form__button {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 12px;
+}
+.form__button:hover {
+  cursor: pointer;
+  background-color: hsl(180, 100%, 30%);
+}
+
+.form__input {
+  border-color: rgb(197 197 197 / 70%);
+  border-style: double;
+  display: flex;
+  flex-grow: 1;
+}
+.form {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  /* border-top: 1px solid #ccc; */
+}
+.napis {
+  /* display:flex;
+  justify-content:flex-start; */
+  margin: auto;
+  margin-top: 20px;
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #ccc;
 }
