@@ -49,14 +49,22 @@
         toggleTask(toggleIndex);
       });
     });
+    // const addTaskButton = document.querySelectorAll(".js-addTaskButton");
+    // const formElement = document.querySelectorAll(".js-input");
+
+    //   addTaskButton.addEventListener("click", () => {
+    //     formElement.focus();
+    //   });
   }
   function onFormSubmit(event) {
+  
     event.preventDefault();
-
-    const newTaskContent = document.querySelector(".js-input").value.trim();
-
+    const newTaskFocus = document.querySelector(".js-input");
+    const newTaskContent = newTaskFocus.value.trim();
     pushTasks(newTaskContent);
+    newTaskFocus.focus();
     render();
+    
   }
   function pushTasks(newTaskContent) {
     if (newTaskContent === "") {
