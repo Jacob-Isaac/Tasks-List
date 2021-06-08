@@ -49,12 +49,6 @@
         toggleTask(toggleIndex);
       });
     });
-    // const addTaskButton = document.querySelectorAll(".js-addTaskButton");
-    // const formElement = document.querySelectorAll(".js-input");
-
-    //   addTaskButton.addEventListener("click", () => {
-    //     formElement.focus();
-    //   });
   }
   function onFormSubmit(event) {
   

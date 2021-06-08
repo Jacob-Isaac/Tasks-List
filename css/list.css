@@ -1,0 +1,37 @@
+.list {
+  margin: auto;
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+}
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.button__remove {
+  border: transparent;
+  cursor: pointer;
+  background: red;
+  order: 2;
+  min-width: 30px;
+  min-height: 30px;
+  color: white;
+}
+.button__done {
+  border: transparent;
+  cursor: pointer;
+  background: green;
+  min-width: 30px;
+  min-height: 30px;
+  order: -1;
+  color: white;
+}
+.content {
+  font-size: 12px;
+  padding: 10px;
+  text-align: justify;
+}
+.content--decoration {
+  text-decoration: line-through;
+}
