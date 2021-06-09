@@ -1,14 +1,5 @@
 {
-  const tasks = [
-    // {
-    //   content: "nagrać lekcję",
-    //   done: false,
-    // },
-    // {
-    //   content: "zrobić zakupy",
-    //   done: false,
-    // },
-  ];
+  const tasks = [];
 
   init();
 
@@ -21,11 +12,12 @@
   }
   function render() {
     let htmlString = "";
-    for (const task of tasks) 
-    {
-      htmlString += `<li class="list__item"> 
+    for (const task of tasks) {
+      htmlString += `<li class="section__list--item"> 
       <button class="js-remove button button__remove">🗑</button>
-      <button class="js-done button button__done"> ${task.done ? "✔" : ""}</button>
+      <button class="js-done button button__done"> ${
+        task.done ? "✔" : ""
+      }</button>
       <span class="content
       ${task.done ? "content--decoration" : ""}">
       ${task.content}</span></li>`;
@@ -51,12 +43,12 @@
     });
   }
   function onFormSubmit(event) {
-  
     event.preventDefault();
     const newTaskFocus = document.querySelector(".js-input");
     const newTaskContent = newTaskFocus.value.trim();
     pushTasks(newTaskContent);
     newTaskFocus.focus();
+    newTaskFocus.value = "";
     render();
     
   }
