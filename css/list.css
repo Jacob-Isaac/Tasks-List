@@ -19,11 +19,18 @@
   color: white;
   transition: transform 0.25s;
 }
+@media (max-width: 600px) {
+  .button__remove {
+    transition: transform 0.5s;
+  }
+}
 .button__remove:hover {
   transform: scale(1.1);
 }
-.button__remove:active {
-  transform: scale(0.9);
+@media (max-width: 600px) {
+  .button__remove:active {
+    transform: scale(1.8);
+  }
 }
 .button__done {
   border: transparent;
@@ -35,11 +42,18 @@
   color: white;
   transition: transform 0.25s;
 }
+@media (max-width: 600px) {
+  .button__done {
+    transition: transform 0.5s;
+  }
+}
 .button__done:hover {
   transform: scale(1.1);
 }
-.button__done:active {
-  transform: scale(0.9);
+@media (max-width: 600px) {
+  .button__done:active {
+    transform: scale(1.8);
+  }
 }
 .content {
   font-size: 12px;
