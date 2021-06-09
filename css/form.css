@@ -1,28 +1,27 @@
-.form {
+.section__form {
   display: flex;
   justify-content: flex-start;
   margin: auto;
   padding: 25px;
-  background-color: rgb(255, 255, 255);
 }
 @media (max-width: 680px) {
-  .form {
+  .section__form {
     flex-direction: column;
   }
 }
-.form__input {
+.section__form--input {
   border-color: rgb(197 197 197 / 70%);
   border-style: double;
   flex-grow: 1;
   padding: 10px;
 }
 @media (max-width: 680px) {
-  .form__input {
+  .section__form--input {
     align-self: stretch;
     margin-bottom: 10px;
   }
 }
-.form__button {
+.section__form--button {
   background-color: teal;
   color: white;
   border: none;
@@ -32,13 +31,16 @@
   cursor: pointer;
 }
 @media (max-width: 680px) {
-  .form__button {
+  .section__form--button {
     align-self: stretch;
     margin-left: 0px;
   }
 }
-.form__button:active {
+.section__form--button:active {
   cursor: pointer;
   background-color: hsl(180, 100%, 28%);
   transform: scale(0.9);
 }
+.section__form--button:hover {
+    background-color: hsl(180, 100%, 28%);
+  }
