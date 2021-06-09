@@ -1,13 +1,13 @@
 {
   const tasks = [
-    {
-      content: "nagrać lekcję",
-      done: false,
-    },
-    {
-      content: "zrobić zakupy",
-      done: false,
-    },
+    // {
+    //   content: "nagrać lekcję",
+    //   done: false,
+    // },
+    // {
+    //   content: "zrobić zakupy",
+    //   done: false,
+    // },
   ];
 
   init();
