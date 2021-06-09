@@ -17,7 +17,11 @@
   min-width: 30px;
   min-height: 30px;
   color: white;
+  transition: transform 0.25s;
 }
+.button__remove:hover {
+    transform: scale(1.1);
+  }
 .button__done {
   border: transparent;
   cursor: pointer;
@@ -26,7 +30,11 @@
   min-height: 30px;
   order: -1;
   color: white;
+  transition: transform 0.25s;
 }
+.button__done:hover {
+    transform: scale(1.1);
+  }
 .content {
   font-size: 12px;
   padding: 10px;

@@ -28,6 +28,8 @@
   border: none;
   padding: 10px;
   margin-left: 12px;
+  transition: background 0.25s, transform 0.25s;
+  cursor: pointer;
 }
 @media (max-width: 680px) {
   .form__button {
@@ -35,7 +37,8 @@
     margin-left: 0px;
   }
 }
-.form__button:hover {
+.form__button:active {
   cursor: pointer;
-  background-color: hsl(180, 100%, 30%);
+  background-color: hsl(180, 100%, 28%);
+  transform: scale(0.9);
 }
