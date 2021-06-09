@@ -1,12 +1,12 @@
-.list {
+.section__list {
   margin: auto;
-  padding: 25px;
-  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  padding-top: 15px;
 }
-.list__item {
+.section__list--item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:flex-start;
   border-bottom: 1px solid #ccc;
 }
 .button__remove {
@@ -20,8 +20,8 @@
   transition: transform 0.25s;
 }
 .button__remove:hover {
-    transform: scale(1.1);
-  }
+  transform: scale(1.1);
+}
 .button__done {
   border: transparent;
   cursor: pointer;
@@ -33,12 +33,15 @@
   transition: transform 0.25s;
 }
 .button__done:hover {
-    transform: scale(1.1);
-  }
+  transform: scale(1.1);
+}
 .content {
   font-size: 12px;
-  padding: 10px;
+  padding: 8px;
   text-align: justify;
+  word-break: break-word;
+  flex-grow: 1;
+  ;
 }
 .content--decoration {
   text-decoration: line-through;
