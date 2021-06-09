@@ -6,7 +6,7 @@
 .section__list--item {
   display: flex;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
   border-bottom: 1px solid #ccc;
 }
 .button__remove {
@@ -22,6 +22,9 @@
 .button__remove:hover {
   transform: scale(1.1);
 }
+.button__remove:active {
+  transform: scale(0.9);
+}
 .button__done {
   border: transparent;
   cursor: pointer;
@@ -35,13 +38,15 @@
 .button__done:hover {
   transform: scale(1.1);
 }
+.button__done:active {
+  transform: scale(0.9);
+}
 .content {
   font-size: 12px;
   padding: 8px;
   text-align: justify;
   word-break: break-word;
   flex-grow: 1;
-  ;
 }
 .content--decoration {
   text-decoration: line-through;
