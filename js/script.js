@@ -1,16 +1,18 @@
 {
-  const tasks = [];
+  let tasks = [];
 
-  init();
-
-  function init() {
+  const tasksCopy = (tasksCopyContent) => {
+    tasks = [...tasks, { content: taskCopyContent }];
+    render();
+  };
+  const init = () => {
     render();
 
     const form = document.querySelector(".js-form");
 
     form.addEventListener("submit", onFormSubmit);
-  }
-  function render() {
+  };
+  const render = () => {
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `<li class="section__list--item"> 
@@ -24,8 +26,8 @@
     }
     document.querySelector(".js-list").innerHTML = htmlString;
     buttonsEvents();
-  }
-  function buttonsEvents() {
+  };
+  const buttonsEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, removeIndex) => {
@@ -41,8 +43,8 @@
         toggleTask(toggleIndex);
       });
     });
-  }
-  function onFormSubmit(event) {
+  };
+  const onFormSubmit = (event) => {
     event.preventDefault();
     const newTaskFocus = document.querySelector(".js-input");
     const newTaskContent = newTaskFocus.value.trim();
@@ -50,22 +52,24 @@
     newTaskFocus.focus();
     newTaskFocus.value = "";
     render();
-    
-  }
-  function pushTasks(newTaskContent) {
+  };
+  const pushTasks = (newTaskContent) => {
     if (newTaskContent === "") {
       return;
     }
     tasks.push({
       content: newTaskContent,
     });
-  }
-  function removeTask(removeIndex) {
+  };
+  const removeTask = (removeIndex) => {
+    tasks = [...tasks.slice(0, removeIndex)];
     tasks.splice(removeIndex, 1);
     render();
-  }
-  function toggleTask(toggleIndex) {
+  };
+  const toggleTask = (toggleIndex) => {
     tasks[toggleIndex].done = !tasks[toggleIndex].done;
     render();
-  }
+  };
+
+  init();
 }
