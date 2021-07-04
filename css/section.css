@@ -3,3 +3,22 @@
   margin-top: 20px;
   box-shadow: 0 0 5px rgb(212, 212, 212);
 }
+ .section__flex {
+  
+  display: flex;
+align-items: center;
+justify-content: space-around;
+} 
+.border {
+  border-bottom: 1px solid #ccc;
+}
+.disabled{
+  background-color:transparent;
+  border: transparent;
+}
+ .costam{
+  flex-basis:250px;
+  border: transparent;
+  cursor: pointer;
+  background: none;
+} 

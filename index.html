@@ -24,15 +24,20 @@
   <main class="container">
     <h1 class="container__header">Lista zadań</h1>
     <section class="section">
-      <h2 class="section__header">Dodaj nowe zadanie</h2>
+      <div class = "border"><h2 class="section__header">Dodaj nowe zadanie</h2></div>
       <form class="js-form section__form">
         <input autofocus class="js-input section__form--input" placeholder=" Co jest do zrobienia?"></input>
         <button class="js-addTaskButton section__form--button">Dodaj zadanie</button>
       </form>
     </section>
     <section class="section">
+      <div class = "border section__flex">
       <h2 class="section__header">Lista zadań</h2>
+      <button class="costam js-hideShowButton">Ukryj wszystkie zadania</button>
+      <button class="costam js-markAllbutton">Pokaz wszystkie zadania</button>
+    </div>
       <ul class="js-list section__list"></ul>
+     
     </section>
   </main>
 </body>

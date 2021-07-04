@@ -14,10 +14,10 @@ html {
   margin-top: 40px;
 }
 .section__header {
-  margin: auto;
-  padding: 25px;
+   margin: auto;
+  padding: 25px; 
   background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid #ccc;
+ flex-grow: 2;
 }
 .button {
   margin: 15px;
