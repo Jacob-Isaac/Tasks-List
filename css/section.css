@@ -16,9 +16,13 @@ justify-content: space-around;
   background-color:transparent;
   border: transparent;
 }
- .costam{
+ .section__button{
   flex-basis:250px;
   border: transparent;
   cursor: pointer;
   background: none;
+  
+} 
+ .section__button:disabled{
+  color: rgb(187, 255, 0);
 } 
