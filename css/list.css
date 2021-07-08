@@ -9,6 +9,11 @@
   justify-content: flex-start;
   border-bottom: 1px solid #ccc;
 }
+
+.section__list--hidden{
+display: none;
+}
+
 .button__remove {
   border: transparent;
   cursor: pointer;
