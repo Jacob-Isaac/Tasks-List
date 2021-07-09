@@ -10,15 +10,6 @@ html {
   background-color: rgb(230, 230, 230);
   font-family: "Montserrat", sans-serif;
 }
-.container__header {
-  margin-top: 40px;
-}
-.section__header {
-   margin: auto;
-  padding: 25px; 
-  background-color: rgb(255, 255, 255);
- flex-grow: 2;
-}
 .button {
   margin: 15px;
 }

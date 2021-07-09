@@ -7,12 +7,12 @@
       return;
     }
     tasks = [...tasks, { content: newTaskContent }];
-    render();
+    renderTasks();
     renderButtons();
   };
   const removeTask = (removeIndex) => {
     tasks = [...tasks.slice(0, removeIndex), ...tasks.slice(removeIndex + 1)];
-    render();
+    renderTasks();
     renderButtons();
   };
   const toggleTask = (toggleIndex) => {
@@ -24,7 +24,7 @@
       },
       ...tasks.slice(toggleIndex + 1),
     ];
-    render();
+    renderTasks();
     renderButtons();
   };
   const markAllTasks = () => {
@@ -32,28 +32,32 @@
       ...task,
       done: true,
     }));
-    render();
+    renderTasks();
     renderButtons();
   };
   const hideShowAllTasks = () => {
     hideShowTasks = !hideShowTasks;
-    render();
+    renderTasks();
     renderButtons();
   };
 
   const renderButtons = () => {
     let actionString = "";
-    actionString += `<button class="section__button js-hideShowButton">${
+    actionString += `<button class="section__button js-hideShowButton${
+      tasks.length === 0 ? " section__button--hidden" : ""
+    }"${tasks.every(({ done }) => !done) ? "disabled" : ""}>${
       hideShowTasks ? "Pokaż" : "Ukryj"
     } ukończone</button>
-      <button class="section__button js-markAllButton"${
-        tasks.every(({ done }) => done) ? "disabled" : ""
-      }>Ukończ wszystkie</button>`;
+      <button class="section__button js-markAllButton${
+        tasks.length === 0 ? " section__button--hidden" : ""
+      }"${
+      tasks.every(({ done }) => done) ? "disabled" : ""
+    }>Ukończ wszystkie</button>`;
 
     document.querySelector(".js-actionButtons").innerHTML = actionString;
     bindButtonsEvents();
   };
-  const render = () => {
+  const renderTasks = () => {
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `<li class="section__list--item${
@@ -112,7 +116,7 @@
     newTaskFocus.value = "";
   };
   const init = () => {
-    render();
+    renderTasks();
 
     const form = document.querySelector(".js-form");
 

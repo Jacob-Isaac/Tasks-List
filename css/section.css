@@ -3,26 +3,77 @@
   margin-top: 20px;
   box-shadow: 0 0 5px rgb(212, 212, 212);
 }
- .section__flex {
-  
+.section__header {
+  margin: auto;
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  flex-grow: 2;
+}
+.section__flex {
   display: flex;
-align-items: center;
-justify-content: space-around;
-} 
-.border {
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 680px) {
+  .section__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 680px) {
+  .section__flex {
+    flex-direction: column;
+  }
+}
+.section__border {
   border-bottom: 1px solid #ccc;
 }
-.disabled{
-  background-color:transparent;
-  border: transparent;
-}
- .section__button{
-  flex-basis:250px;
+.section__button {
   border: transparent;
   cursor: pointer;
   background: none;
-  
-} 
- .section__button:disabled{
-  color: rgb(187, 255, 0);
-} 
+  padding: 10px;
+  color: hsl(180, 100%, 28%);
+  font-weight: bold;
+  transition: color 0.25s;
+}
+.section__button--hidden {
+  display: none;
+}
+.section__button:disabled {
+  color: rgb(182, 182, 182);
+}
+.section__button:hover {
+  color: hsl(180, 98%, 36%);
+}
+.section__button:disabled:hover {
+  color: rgb(199, 199, 199);
+}
+
+/* TASKS */
+
+.section__list {
+  margin: auto;
+  padding: 20px;
+  padding-top: 15px;
+}
+.section__list--item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #ccc;
+}
+.section__list--hidden {
+  display: none;
+}
+.content {
+  font-size: 12px;
+  padding: 8px;
+  text-align: justify;
+  word-break: break-word;
+  flex-grow: 1;
+}
+.content--decoration {
+  text-decoration: line-through;
+}
